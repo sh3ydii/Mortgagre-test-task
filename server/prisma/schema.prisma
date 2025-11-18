@@ -1,0 +1,44 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model MortgageProfile {
+  id                 Int      @id @default(autoincrement())
+  propertyPrice      Float
+  downPaymentAmount  Float
+  matCapitalAmount   Float?
+  loanTermYears      Int
+  interestRate       Float
+  loanAmount         Float 
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+  MortgageCalculations MortgageCalculation[]
+}
+
+model MortgageCalculation {
+  id                   Int       @id @default(autoincrement())
+  mortgageProfileId    Int
+  monthlyPayment       Float
+  totalPayment         Float
+  totalOverpaymentAmount Float
+  possibleTaxDeduction Float
+  savingsDueMotherCapital Float
+  recommendedIncome    Float
+  paymentSchedule      Json
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  MortgageProfile      MortgageProfile @relation(fields: [mortgageProfileId], references: [id])
+}

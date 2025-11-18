@@ -1,0 +1,12 @@
+11/18/2025, 12:31:12 AM # ExceptionsHandler: TypeError: Cannot destructure property 'propertyPrice' of 'request' as it is undefined.
+
+11/18/2025, 12:32:44 AM # ExceptionsHandler: TypeError: Cannot destructure property 'propertyPrice' of 'request' as it is undefined.
+
+11/18/2025, 12:33:18 AM # ExceptionsHandler: TypeError: Cannot destructure property 'propertyPrice' of 'request' as it is undefined.
+
+11/18/2025, 12:35:57 AM # ExceptionsHandler: TypeError: Cannot destructure property 'propertyPrice' of 'request' as it is undefined.
+
+11/18/2025, 12:36:36 AM # ExceptionsHandler: TypeError: Cannot destructure property 'propertyPrice' of 'request' as it is undefined.
+
+11/18/2025, 12:36:49 AM # ExceptionsHandler: TypeError: Cannot destructure property 'propertyPrice' of 'request' as it is undefined.
+
